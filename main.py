@@ -37,12 +37,12 @@ def verify_x(n, x, a1, a2, b1, b2):
 
 def back(n, a1, a2, b1, b2):
 
-    with open('14.txt', 'a') as f:
-        f.write(str(a1))
-        f.write(str(b1))
-        f.write(str(a2))
-        f.write(str(b2))
-        f.write("\n")
+    # with open('14.txt', 'a') as f:
+    #     f.write(str(a1))
+    #     f.write(str(b1))
+    #     f.write(str(a2))
+    #     f.write(str(b2))
+    #     f.write("\n")
 
     if sum(b2) == n and len(b2) == 4:
         print_all(a1, a2, b1 ,b2)
