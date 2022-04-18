@@ -21,16 +21,28 @@ def print_all(a1, a2, b1 ,b2):
         f.write(str(b2[1]) + "     " +str(b1[2]))
         f.write("\n")
         
-        for x in a2:
+        for x in a2[::-1]:
             f.write(str(x) + "  ")
         
         f.write("\n")
+        # f.write(str(a1))
+        # f.write(str(b1))
+        # f.write(str(a2))
+        # f.write(str(b2))
+        # f.write("\n")
         f.write("\n")
 
 def verify_x(n, x, a1, a2, b1, b2):
     return (not x in a1) and (not x in b1) and (not x in a2) and (not x in b2)
 
 def back(n, a1, a2, b1, b2):
+
+    with open('14.txt', 'a') as f:
+        f.write(str(a1))
+        f.write(str(b1))
+        f.write(str(a2))
+        f.write(str(b2))
+        f.write("\n")
 
     if sum(b2) == n and len(b2) == 4:
         print_all(a1, a2, b1 ,b2)
@@ -93,6 +105,7 @@ def cauta(n):
 
 if __name__ == '__main__':
     # cauta(18)
+
     cauta(14)
     # cauta(15)
     # cauta(16)
